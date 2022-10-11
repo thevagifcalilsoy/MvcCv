@@ -1,0 +1,78 @@
+﻿@using MvcCv.Models.Entity
+@model List<Tbl_Yetenekler>
+    @*<style>
+        .isle{
+            width:2rem;
+            height:2rem; 
+        }
+    </style>*@
+<div class="resume-section-content">
+    <h2 class="mb-5" style="color:darkorange;">Bacariqlarim</h2>
+    <div class="subheading mb-3" style="color:cornflowerblue;">Programlaşdirma Dilləri & Alətlər</div>
+    <ul class="list-inline dev-icons" style="color:cornflowerblue">
+        <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
+        <li class="list-inline-item"> <img style="color:cornflowerblue" class="cssrun" src="~/startbootstrap-resume-gh-pages/assets/img/icons8-c-sharp-logo-96.png" />  </li>
+        <li class="list-inline-item"><img class="cssrun" src="~/startbootstrap-resume-gh-pages/assets/img/icons8-.net-framework-96.png" /> </li>
+        <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
+        <li class="list-inline-item"><i class="fab fa-angular"></i></li>
+        <li class="list-inline-item"><i class="fab fa-react"></i></li>
+        <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
+        <li class="list-inline-item"><i class="fab fa-html5"></i></li>
+        <li class="list-inline-item"><i class="fa fa-database"></i></li>
+        <li class="list-inline-item"><i class="fab fa-wordpress"></i></li>
+        <li class="list-inline-item"><i class="fa fa-c"></i></li>
+        <li class="list-inline-item"><i class="fab fa-bootstrap"></i></li>
+        <li class="list-inline-item"><img class="cssrun" src="~/startbootstrap-resume-gh-pages/assets/img/icons8-postgresql-96.png" /> </li>
+    </ul>
+    <div class="subheading mb-3" style="color:blueviolet;">Bacariqlarim</div>
+    <ul class="fa-ul mb-0">
+        @foreach (var x in Model)
+        {
+            <li>
+                <span class="fa-li"><i class="fas fa-check" style="color: blueviolet"></i></span>
+                <span style="color: blueviolet">@x.Yetenek</span>
+            </li>
+        }
+
+    </ul>
+    <br />
+    <br />
+    <div class="subheading mb-3" style="color:darkorange;">Dİllər</div>
+    <ul class="fa-ul mb-0" >
+
+        <li >
+            <span class="fa-li"><i class="fas fa-check" style="color: darkorange "></i></span>
+            <div>
+
+                <span style="color: darkorange">Azerbaijani</span>
+                <span class="fas fa-battery-full" style="color: darkorange "></span>
+            </div>
+        </li>
+        <li>
+            <span class="fa-li"><i class="fas fa-check" style="color: darkorange "></i></span>
+            <div>
+
+                <span style="color: darkorange">Turkish</span>
+                <span class="fas fa-battery-full" style="color: darkorange "></span>
+            </div>
+        </li>
+        <li>
+            <span class="fa-li"><i class="fas fa-check" style="color: darkorange "></i></span>
+            <div>
+
+                <span style="color: darkorange">English</span>
+                <span class="fas fa-battery-4" style="color: darkorange"></span>
+            </div>
+        </li>
+        <li>
+            <span class="fa-li"><i class="fas fa-check" style="color: darkorange"></i></span>
+            <div>
+
+                <span style="color: darkorange">Russian</span>
+                <span class="fas fa-battery-2" style="color: darkorange"></span>
+            </div>
+        </li>
+
+
+    </ul>
+</div>

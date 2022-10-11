@@ -1,0 +1,36 @@
+﻿@model  MvcCv.Models.Entity.Tbl_Egitim
+
+@{
+    ViewBag.Title = "EgitimEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<br />
+
+<h2> Əlavə Et</h2>
+
+<br />
+<form method="post">
+
+    @Html.Label("Başliq")
+    @Html.TextBoxFor(x => x.AltBaslik1, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.AltBaslik1, "",new { @style="color:red"})
+    <br />
+    @Html.Label("Alt Başliq ")
+    @Html.TextBoxFor(x => x.AltBaslik2, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x=>x.AltBaslik2,"",new {@style="color:red"})
+    <br />
+    @Html.Label("Ortalama ")
+    @Html.TextBoxFor(x => x.GNO, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.GNO, "",new {@style="color:red"})
+   
+    <br />
+
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+    <br />
+    <br />
+    <button class="btn btn-info">Əlavə  Et</button>
+</form>
+

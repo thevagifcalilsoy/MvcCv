@@ -1,0 +1,30 @@
+﻿@model MvcCv.Models.Entity.Tbl_Egitim
+
+@{
+    ViewBag.Title = "EgitimDuzenle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<h2>Güncəllə</h2>
+<br />
+<form method="post">
+    @Html.Label("ID")
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+    <br />
+
+    @Html.Label("Alt Başliq")
+    @Html.TextBoxFor(x => x.AltBaslik1, new { @class = "form-control" })
+    <br />
+    @Html.Label("Başliq")
+    @Html.TextAreaFor(x => x.AltBaslik2, new { @class = "form-control" })
+    <br />
+    @Html.Label("Ortalama")
+    @Html.TextAreaFor(x => x.GNO, new { @class = "form-control" })
+    <br />
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Əlavə  Et</button>
+</form>
+

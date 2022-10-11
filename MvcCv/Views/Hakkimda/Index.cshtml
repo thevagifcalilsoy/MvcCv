@@ -1,0 +1,115 @@
+﻿@using MvcCv.Models.Entity
+
+@model List<Tbl_Hakkinda>
+
+@{
+
+    ViewBag.Title = "Index";
+
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+}
+
+<br />
+
+<h2>Haqqımda </h2>
+
+<br />
+
+@using (Html.BeginForm("Index", "Hakkimda", FormMethod.Post, new { enctype = "multipart/form-data" }))
+
+{
+
+    <form method="post">
+
+        @foreach (var item in Model)
+
+        {
+
+            <label>Ad</label>
+
+            <br />
+
+            <input type="text" name="Ad" class="form-control" value="@item.Ad" />
+
+            <br />
+
+            <label>Soyad</label>
+
+            <br />
+
+            <input type="text" name="Soyad" class="form-control" value="@item.Soyad" />
+
+            <br />
+
+            <label>Adres</label>
+
+            <br />
+
+            <input type="text" name="Adres" class="form-control" value="@item.Adres" />
+
+            <br />
+
+
+            <br />
+
+            <label>Telefon</label>
+
+            <br />
+
+            <input type="text" name="Telefon" class="form-control" value="@item.Telefon" />
+
+            <br />
+
+
+            <label>Mail</label>
+
+            <br />
+
+            <input type="text" name="Mail" class="form-control" value="@item.Mail" />
+
+
+
+            <label>Açıklama</label>
+
+            <br />
+
+            <textarea rows="5" class="form-control" name="Aciklama">@item.Aciklama</textarea>
+
+
+
+
+
+            <label>Resim</label>
+
+            <br />
+
+            @Html.ValidationMessageFor(x => item.Resim, "", new { @style = "color:red" })
+
+            <input type="file" name="Resim" value="@item.Resim" />
+
+
+
+
+
+            <br />
+
+
+
+
+
+
+        }
+
+
+
+        <br />
+
+
+
+        <button class="btn btn-success">Güncelle</button>
+
+    </form>
+
+}
+

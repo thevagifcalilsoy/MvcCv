@@ -1,0 +1,17 @@
+﻿@using MvcCv.Models.Entity
+
+@model List<Tbl_Port>
+
+
+
+@foreach (var x in Model)
+{
+
+    <div class="resume-section-content">
+      <h2 class="mb-5"><span style="color:darkorange;">WebSİte</span> <span style="color:black;">Haqqinda</span> </h2>
+        <p class="lead mb-5" style="color:black">@x.Portfilo</p>
+
+    </div>
+    
+}
+

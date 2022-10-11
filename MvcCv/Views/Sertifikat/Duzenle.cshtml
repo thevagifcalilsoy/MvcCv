@@ -1,0 +1,23 @@
+﻿@model MvcCv.Models.Entity.Tbl_Sertifikalarim
+
+@{
+    ViewBag.Title = "Duzenle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Güncəllə</h2>
+<br />
+<form method="post">
+    @Html.Label("Aciqlama")
+    @Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control" })
+    <br />
+
+    @Html.Label("Tarix")
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-info">Güncəllə</button>
+</form>
+
+
+

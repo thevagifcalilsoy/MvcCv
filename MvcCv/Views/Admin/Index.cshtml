@@ -1,0 +1,38 @@
+﻿@using MvcCv.Models.Entity
+@model List<Tbl_Admin>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<br />
+<h2>Login Şifrə Dəyişmə </h2>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>AD</th>
+        <th>Güncəllə</th>
+        <th>Sil</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.KullaniciAdi</td>
+
+            <td><a href="/Admin/Duzenle/@x.ID" class="btn btn-warning">Güncəllə</a></td>
+            <td><a href="/Admin/Sil/@x.ID" class="btn btn-danger">Sil</a></td>
+
+
+        </tr>
+
+    }
+
+</table>
+<br />
+<a href="/Admin/Ekle/" class="btn btn-success">Əlavə Et</a>
+
+

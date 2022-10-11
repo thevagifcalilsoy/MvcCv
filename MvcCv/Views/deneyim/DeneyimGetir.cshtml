@@ -1,0 +1,29 @@
+﻿@model  MvcCv.Models.Entity.Tbl_Deneyimlerim
+
+@{
+    ViewBag.Title = "DeneyimGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Güncəllə</h2>
+<br />
+<form method="post">
+    @Html.Label("ID")
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+    <br />
+    @Html.Label("Başliq")
+    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+    <br />
+    @Html.Label("Alt Başliq")
+    @Html.TextBoxFor(x => x.AltBaslik, new { @class = "form-control" })
+    <br />
+    @Html.Label("Aciqlama")
+    @Html.TextAreaFor(x => x.Aciklama , new {  @class = " form-control whatever-class", @cols = 80, @rows = 10 } )
+    <br />
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+
+<button class="btn btn-info">Güncəllə</button>
+</form>
+
+

@@ -1,0 +1,22 @@
+﻿@using MvcCv.Models.Entity
+@model List<Tbl_Hobilerim>
+<div class="resume-section-content">
+    <h2 class="mb-5"style="color:darkorange;">Hobİ</h2>
+ 
+    @foreach (var x in Model)
+    {
+
+        <ul class="fa-ul mb-0">
+
+            <li>
+                <span class="fa-li"><i class="fas fa-check" style="color: blueviolet"></i></span>
+                <span style="color:blueviolet">@x.Aciklama1</span>
+                <span style="color:blueviolet">@x.Aciklama2</span>
+            </li>
+
+
+        </ul>
+
+    }
+   
+</div>
